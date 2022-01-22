@@ -1,18 +1,18 @@
 package ru.netology.domain;
 
 public class Post {
-    private int postponedId;
+    private int  postponedId;
     private int canPin;
-    private int canDelete;
+    private int  canDelete;
     private int integer;
     private int isPinned;
     private int markedAsAds;
     private int booleanSignerId;
     private String[] postType;
-    private int id;
+    private int  id;
     private int ownerId;
     private int fromId;
-    private int createdBy;
+    private int  createdBy;
     private int date;
     private String[] text;
     private int replyOwnerId;
@@ -20,6 +20,10 @@ public class Post {
     private int friendsOnly;
     private LikesInfo likesInfo;
     private CommentsInfo CommentsInfo;
+    private CopyRightInfo CopeRightInfo;
+    private DonutInfo DonutInfo;
+    private GeoInfo GeoInfo;
+    private PostSourceInfo PostSourceInfo;
     private RepostsInfo RepostsInfo;
 
     public void setPostponedId(int postponedId) {
@@ -98,8 +102,28 @@ public class Post {
         CommentsInfo = commentsInfo;
     }
 
+    public void setCoperightInfo(CopyRightInfo copeRightInfo) {
+        CopeRightInfo = copeRightInfo;
+    }
+
+    public void setDonutInfo(ru.netology.domain.DonutInfo donutInfo) {
+        DonutInfo = donutInfo;
+    }
+
+    public void setGeoInfo(ru.netology.domain.GeoInfo geoInfo) {
+        GeoInfo = geoInfo;
+    }
+
+    public void setPostSourceInfo(ru.netology.domain.PostSourceInfo postSourceInfo) {
+        PostSourceInfo = postSourceInfo;
+    }
+
     public void setRepostsInfo(ru.netology.domain.RepostsInfo repostsInfo) {
         RepostsInfo = repostsInfo;
+    }
+
+    public void setViewInfo(ViewInfo viewInfo) {
+        ViewInfo = viewInfo;
     }
 
     public int getPostponedId() {
@@ -178,7 +202,29 @@ public class Post {
         return CommentsInfo;
     }
 
+    public CopyRightInfo getCopeRightInfo() {
+        return CopeRightInfo;
+    }
+
+    public ru.netology.domain.DonutInfo getDonutInfo() {
+        return DonutInfo;
+    }
+
+    public ru.netology.domain.GeoInfo getGeoInfo() {
+        return GeoInfo;
+    }
+
+    public ru.netology.domain.PostSourceInfo getPostSourceInfo() {
+        return PostSourceInfo;
+    }
+
     public ru.netology.domain.RepostsInfo getRepostsInfo() {
         return RepostsInfo;
     }
+
+    public ViewInfo getViewInfo() {
+        return ViewInfo;
+    }
+
+    private ViewInfo ViewInfo;
 }
